@@ -36,7 +36,7 @@ Here are a few best practices that we recommend as you evaluate migrating IaaS r
 > [!IMPORTANT]
 > ExpressRoute gateways and Application Gateways are not currently supported for migration from classic to Resource Manager. To migrate a classic virtual network with a ExpressRoute or Application gateway, remove the gateway before running a Commit operation to move the network (you can run the Prepare step without deleting the ExpressRoute or Application gateway). After you complete the migration, reconnect the gateway in Azure Resource Manager.
 > 
-> 
+> *include section on BGInfo.  Extension is not supported in ARM and must manually be removed from VMs before they can migrate. 
 
 ## Step 2: Install the latest version of Azure PowerShell
 There are two main options to install Azure PowerShell: [PowerShell Gallery](https://www.powershellgallery.com/profiles/azure-sdk/) or [Web Platform Installer (WebPI)](http://aka.ms/webpi-azps). WebPI receives monthly updates. PowerShell Gallery receives updates on a continuous basis. This article is based on Azure PowerShell version 2.1.0.
