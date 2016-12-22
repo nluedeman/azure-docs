@@ -687,7 +687,7 @@ This procedure describes how to run an 'unplanned failover' for a recovery plan.
     ![completemigration](./media/site-recovery-hyper-v-site-to-azure/migrate.png)
 3. Click **OK** to complete the migration. You can track progress by clicking on the VM to open its properties, or by using the Complete Migration job in **Settings > Site Recovery jobs**.
 
-
+***move these items to the pre-req section***
 ### Prepare to connect to Azure VMs after failover
 If you want to connect to Azure VMs using RDP after failover, make sure you do the following:
 
