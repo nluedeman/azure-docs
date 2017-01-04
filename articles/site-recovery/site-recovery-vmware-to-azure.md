@@ -452,7 +452,7 @@ Make sure that machines you want to replicate are prepared for Mobility service 
 ### Install the Mobility service
 The first step in enabling protection for virtual machines and physical servers is to install the Mobility service. You can do this in a couple of ways:
 
-* **Process server push**: When you enable replication on a machine, push and install the Mobility service component from the process server. Note that push installation won't occur if machines are already running an up-to-date version of the component.
+* **Process server push**: When you enable replication on a machine [need a link or more details on how-to enable replication.  Assume via the portal but it's never stated!], push and install the Mobility service component from the process server. Note that push installation won't occur if machines are already running an up-to-date version of the component.
 * **Enterprise push**: Automatically install the component using your enterprise push process such as WSUS or System Center Configuration Manager or [Azure Automation and Desired State configuration](site-recovery-automate-mobility-service-install.md). Set up the configuration server before you do this.
 * **Manual installation**: Install the component manually on each machine that you want to replicate. Set up the configuration server before you do this.
 
