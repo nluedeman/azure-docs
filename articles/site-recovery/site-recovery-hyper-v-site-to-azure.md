@@ -380,10 +380,10 @@ To test the deployment you can run a test failover for a single virtual machine 
   * If possible you should shut down primary machines before you run an unplanned failover. This ensures that you don't have both the source and replica machines running at the same time.
   * When you run an unplanned failover it stops data replication from primary machines so any data delta won't be transferred after an unplanned failover begins. In addition if you run an unplanned failover on a recovery plan it will run until complete, even if an error occurs.
 
-### Prepare to connect to Azure VMs after failover
+### Prepare to connect to Azure VMs after failover (Windows)
 If you want to connect to Azure VMs using RDP after failover, make sure you do the following:
 
-**On the on-premises machine before failover**:
+**On the on-premises machine before failover**:(Windows)
 
 * For access over the internet enable RDP, ensure that TCP and UDP rules are added for the **Public**, and ensure that RDP is allowed in the **Windows Firewall** -> **Allowed apps and features** for all profiles.
 * For access over a site-to-site connection enable RDP on the machine, and ensure that RDP is allowed in the **Windows Firewall** -> **Allowed apps and features** for **Domain** and **Private** networks.
@@ -391,7 +391,7 @@ If you want to connect to Azure VMs using RDP after failover, make sure you do t
 * Ensure that the operating system's SAN policy is set to OnlineAll. [Learn more](https://support.microsoft.com/kb/3031135)
 * Turn off the IPSec service before you run the failover.
 
-**On the Azure VM after failover**:
+**On the Azure VM after failover**: (Linux)
 
 * Add a public IP Address to the NIC associated with the Azure VM to allow RDP.
 * Ensure you don't have any domain policies that prevent you from connecting to a virtual machine using a public address.
@@ -399,7 +399,7 @@ If you want to connect to Azure VMs using RDP after failover, make sure you do t
 
 If you want to access an Azure VM running Linux after failover using a Secure Shell client (ssh), do the following:
 
-**On the on-premises machine before failover**:
+**On the on-premises machine before failover** (Linux):
 
 * Ensure that the Secure Shell service on the Azure VM is set to start automatically on system boot.
 * Check that firewall rules allow an SSH connection to it.
